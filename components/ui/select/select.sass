@@ -1,0 +1,71 @@
+@import "~assets/sass/vars"
+@import "~assets/sass/mixins"
+@import "~bootstrap/scss/bootstrap.scss"
+
+.select__body
+  position: relative
+  cursor: pointer
+
+.select__box
+  font-family: inherit
+  font-size: .6rem
+  font-weight: bold
+  line-height: 1
+  padding: 13px 5px
+  border-radius: 4px
+
+.select__inner
+  position: absolute
+  left: 0
+  top: calc(100% + 10px)
+  z-index: 2
+
+.select__inner
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1)
+
+.select__item
+  padding: 15px
+  font-family: inherit
+  font-size: .6rem
+  font-weight: bold
+  line-height: 1
+  cursor: pointer
+  transition: all .2s ease
+  white-space: nowrap
+  &:not(.select__item--disabled):hover
+    background: $denim
+    color: white
+  &:not(:last-child)
+    border-bottom: 1px solid gray
+
+.select__item--disabled
+  opacity: .5
+
+.slide-bottom-fade-enter-active, .slide-bottom-fade-leave-active
+  transition: all .3s ease
+
+.slide-bottom-fade-enter, .slide-bottom-fade-leave-to
+  transform: translateY(-10px)
+  opacity: 0
+
+.light
+  .select__box
+    background: #f2f3f8
+    color: black
+  .select__item
+    background: #f2f3f8
+    color: black
+  .select__item--active
+    background: $denim
+    color: white
+
+.dark
+  .select__box
+    background: #303d5e
+    color: $cadet_blue
+  .select__item
+    background: #303d5e
+    color: $cadet_blue
+  .select__item--active
+    background: $denim
+    color: white

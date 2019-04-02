@@ -1,0 +1,343 @@
+@import '~assets/sass/vars.sass'
+@import '~assets/sass/mixins.sass'
+@import "~bootstrap/scss/bootstrap.scss"
+
+.news
+  &__container
+    padding: 1rem
+    padding-bottom: 0
+    @include media-breakpoint-down(md)
+      padding: .5rem
+      padding-bottom: 0
+
+  &__content
+    padding-left: 2.5rem
+    @include media-breakpoint-down(md)
+      padding-left: 0
+
+  &__header
+    padding-bottom: 1rem
+    &-title
+      font-size: 1.7rem
+
+  &__menu
+    //overflow: hidden
+
+  &__date
+    position: relative
+    padding-left: 1rem
+    margin-bottom: .7rem
+    font-size: .6rem
+    font-weight: bold
+    &:before
+      content: ''
+      display: block
+      left: 0
+      top: 0
+      bottom: 0
+      margin: auto
+      position: absolute
+      width: .7rem
+      height: .7rem
+      border-radius: .7rem
+    &.__unlabel
+      padding-left: 0
+      margin-bottom: 0
+      &:before
+        display: none
+
+  &__wrap
+    margin-top: 2rem
+    margin-bottom: 1rem
+    padding-bottom: 1rem
+
+  &__banner
+    & .news__img
+      min-height: 350px
+      @include media-breakpoint-down(md)
+        min-height: 0px
+      &::before
+          content: ''
+          position: absolute
+          height: 100%
+          width: 100%
+          background-color: rgba(0,0,0,.6)
+          @include media-breakpoint-down(md)
+            content: none
+
+    &.__full
+      margin-left: -1.5rem
+      @include media-breakpoint-down(md)
+        width: 100%
+        margin-left: 0
+      & .news__img
+        &::before
+          content: none
+
+  &__img
+    position: relative
+    width: 100%
+    margin-bottom: .8rem
+    img
+      width: 100%
+    &-desc
+      margin-bottom: .5rem
+      font-size: .6rem
+      color: $cadet_blue
+
+  &__title
+    margin-bottom: .3rem
+    font-weight: bold
+    font-size: .9rem
+    &.__large
+      margin-bottom: 1rem
+      font-size: 1.6rem
+
+  &__label
+    font-size: .7rem
+    font-weight: bold
+    color: $denim
+
+  &__desc
+    margin-bottom: 1rem
+    font-size: 1rem
+    line-height: 1.62
+    color: $cadet_blue
+
+    & img
+      max-width: 100% !important
+      height: auto !important
+
+  &__social
+    width: 1.5rem
+    height: 1.5rem
+    margin: 0 .5rem
+    fill: $santas_gray
+    &:hover
+      fill: $denim
+      cursor: pointer
+
+
+.banner
+  &__content
+    position: absolute
+    left: 0
+    bottom: 0
+    padding: 2rem
+    @include media-breakpoint-down(md)
+      position: relative
+      padding: 0
+
+  &__labels
+    // margin-bottom: .5rem
+
+  &__label
+    display: inline-block
+    padding: 0 .3rem
+    margin-right: .2rem
+    font-size: .7rem
+    color: white
+    background-color: $denim
+
+  &__title
+    margin-bottom: .2rem
+    font-weight: bold
+    font-size: 1.2rem
+    color: white
+    @include media-breakpoint-down(md)
+      color: black
+
+
+.menu
+  &__item
+    font-size: .9rem
+    padding: 0.8rem 0
+    padding-right: 2rem
+    font-weight: bold
+    text-transform: uppercase
+    white-space: nowrap
+
+    &:hover
+      text-decoration: none
+
+    &.nuxt-link-active
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 2.4rem
+        height: .25rem
+
+
+.pagination
+  &__container
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 2rem
+
+  &__btn,
+  &__page
+    display: inline-block
+    width: 2rem
+    height: 2rem
+    margin: 0 .2rem
+    padding: 0
+    border: 0
+    cursor: pointer
+    background-color: transparent
+
+  &__page
+    font-size: .9rem
+    font-weight: bold
+    color: $pale_sky
+
+    &:hover
+      background-color: $cadet_blue
+      color: $athens_gray
+
+    &[active]
+      color: $denim
+      &:hover
+        color: $athens_gray
+
+  &__btn
+    position: relative
+    background-color: $denim
+    &.__prev
+      &:before
+        transform: translateX(.1rem) rotate(45deg)
+
+    &.__next
+      &:before
+        transform: translateX(-.1rem) rotate(-135deg)
+
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 0
+      left: 0
+      top: 0
+      margin: auto
+      display: block
+      width: .5rem
+      height: .5rem
+      border-left: 2px solid white
+      border-bottom: 2px solid white
+
+
+.news__item,
+.news__aside,
+.news__banner
+  & > a:hover
+    text-decoration: none
+
+.flickity-viewport,
+.flickity-enabled,
+.flickity-slider
+  &:focus
+    outline: none !important
+
+
+.news__item .news__img img
+  max-height: 190px
+  max-width: 100%
+  width: auto
+  height: auto
+
+.banner__title
+  @include media-breakpoint-down(md)
+    color: white
+
+.news__menu.news__menu--tags
+  margin: 0 40px
+
+  & .menu__item
+    font-size: .6rem
+    padding: .6rem
+
+  & .flickity-prev-next-button
+    width: 30px
+    height: 30px
+
+  & .flickity-prev-next-button.previous
+      left: -35px
+
+  & .flickity-prev-next-button.next
+      right: -35px
+
+
+
+
+.light
+  .news
+    &__container
+      background-color: white
+      color: $pale_sky
+
+    &__menu,
+    &__header
+      border-bottom: 1px solid $catskill_white
+
+    &__header
+      &-title
+        color: $tangaroa
+        .red
+          color: $crimson
+
+    &__title
+      color: $tangaroa
+
+    &__date
+      color: $tangaroa
+      &:before
+        background-color: $denim
+    &__desc
+      color: $pale_sky
+
+  .menu
+    &__item
+      color: $tangaroa
+      &:hover
+        color: $denim
+      &.nuxt-link-active
+        color: $denim
+        &:before
+          background-color: $denim
+      &.denim
+        color: $denim
+        &:hover
+          color: black
+  .banner__title
+    @include media-breakpoint-down(md)
+      color: black
+
+  .news__list--suggested
+    .news__item:first-child
+      background: $athens_gray
+    .news__item:last-child
+      background: $mischka
+
+.dark
+  .news
+    &__container
+      color: white
+
+    &__title,
+    &__date
+      color: white
+
+  .menu__item
+    &.denim
+      color: white
+      &:hover
+        color: $denim
+
+  .news__list--suggested
+    .news__item:first-child
+      background: $rhino
+    .news__item:last-child
+      background: $tangaroa

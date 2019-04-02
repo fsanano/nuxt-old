@@ -1,0 +1,72 @@
+@import "~bootstrap/scss/functions"
+@import "~bootstrap/scss/variables"
+@import "~bootstrap/scss/mixins"
+
+.ex-table
+  table-layout: fixed
+  width: 100%
+  font-size: .8rem
+  border-collapse: collapse
+
+  @include media-breakpoint-down(lg)
+    font-size: .7rem
+
+  @include media-breakpoint-down(md)
+    font-size: .8rem
+
+.ex-table__th
+  cursor: pointer
+
+  &:hover::after
+    opacity: 1
+
+  &::after
+    content: ''
+    display: inline-block
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 0 6.5px 8px 6.5px
+    border-color: transparent transparent #919191 transparent
+    margin-left: 5px
+    opacity: 0
+    transition: opacity .2s ease
+
+  &.ex-table__th--asc::after
+    opacity: 1
+
+  &.ex-table__th--desc::after
+    opacity: 1
+    border-width: 8px 6.5px 0 6.5px
+    border-color: #919191 transparent transparent transparent
+
+.ex-table__exchanger
+  font-weight: bold
+  text-decoration: underline
+  color: inherit
+
+.ex-table__row
+  transition: background .2s ease
+
+  @include media-breakpoint-down(lg)
+    width: 80px !important
+
+.dark
+  .ex-table__row
+    &:hover
+      background: #323b5d
+
+  .ex-table__row--highest
+    background: rgba(2, 195, 154, .2)
+  .ex-table__row--lowest
+    background: rgba(231, 29, 54, .2)
+
+.light
+  .ex-table__row
+    &:hover
+      background: #efefef
+
+  .ex-table__row--highest
+    background: rgba(2, 195, 154, .2)
+  .ex-table__row--lowest
+    background: rgba(231, 29, 54, .2)

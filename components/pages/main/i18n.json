@@ -1,0 +1,44 @@
+{
+  "messages": {
+    "en": {
+      "mainPage": {
+        "coins": {
+          "title": "{coin} Index Price Online"
+        },
+        "indices": {
+          "title": "ICEX cryptocurrencies indices"
+        },
+        "title": {
+          "coin": "{coinName} Index Price Online",
+          "index": "ICEX cryptocurrencies indices"
+        },
+        "tabs": {
+          "exchangers": "{coin} Exchanges",
+          "indices": "Indices",
+          "coins": "{index} Coins"
+        },
+        "showMore": "Show more"
+      }
+    },
+    "ru": {
+      "mainPage": {
+        "coins": {
+          "title": "{coin} Индекс Цены - Онлайн"
+        },
+        "indices": {
+          "title": "Криптовалютные индексы ICEX"
+        },
+        "title": {
+          "coin": "{coinName} Индекс Цены - Онлайн",
+          "index": "Криптовалютные индексы ICEX"
+        },
+        "tabs": {
+          "exchangers": "Биржи {coin}",
+          "indices": "Индексы",
+          "coins": "Монеты {index}"
+        },
+        "showMore": "Показать еще"
+      }
+    }
+  }
+}

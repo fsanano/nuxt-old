@@ -1,0 +1,36 @@
+@import "~assets/sass/vars.sass"
+
+.index
+  &__types
+    display: flex
+    align-items: center
+
+  &__type
+    padding: 0 .3rem
+    font-size: .7rem
+    opacity: .5
+    &--active
+      opacity: 1
+
+  &-sum
+    padding: 0 1rem
+    &__title
+      font-size: .7rem
+    &__val
+      font-size: .7rem
+
+
+
+.dark
+  .index
+    &__type,
+    &-sum__title,
+    &-sum__val
+      color: $denim
+
+.light
+  .index
+    &__type
+    &-sum__title,
+    &-sum__val
+      color: $pale_sky

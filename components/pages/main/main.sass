@@ -1,0 +1,63 @@
+@import "~element-ui/lib/theme-chalk/tabs"
+@import "~assets/sass/vars.sass"
+
+.news__time
+  display: flex
+  align-items: center
+  color: black
+  font-size: .6rem
+  font-weight: bold
+
+  &::before
+    content: ''
+    width: 15px
+    height: 15px
+    border-radius: 100%
+    background: $denim
+    margin-right: 10px
+
+.news__image
+  width: 100%
+  height: 200px
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  margin-top: 5px
+
+.news__title
+  font-size: 1rem
+  margin-top: 15px
+
+  transition: color .2s ease
+
+.news__link
+  color: inherit
+
+  &:hover
+    text-decoration: none
+    color: $denim
+
+.news__icon
+  height: 150px
+  width: 150px
+  fill: $pale_sky
+
+.el-tabs__item
+  font-size: 16px
+  font-weight: bold
+  &:hover
+    text-decoration: underline
+
+.dark
+  .el-tabs--border-card
+    background: #242b43
+    border: 1px solid $rhino
+
+  .el-tabs__header
+    background-color: #1a223b
+    border-bottom: 1px solid $rhino
+
+  .el-tabs--border-card > .el-tabs__header .el-tabs__item.is-active
+    background-color: $mirage
+    border-color: $rhino
+    color: $denim

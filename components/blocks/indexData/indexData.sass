@@ -1,0 +1,174 @@
+@import '~assets/sass/vars.sass'
+@import '~assets/sass/blocks/change.sass'
+@import "~bootstrap/scss/bootstrap.scss"
+
+.index
+  &__list
+    margin: 0 -.5rem
+    @include media-breakpoint-down(sm)
+      margin: 1rem -0.8rem
+
+  &__item
+    // width: calc(25% - .5rem)
+    margin: 0 .5rem
+    padding: .5rem .35rem
+    margin-bottom: 1rem
+    border-radius: .2rem
+    width: 11rem
+    cursor: pointer
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    // min-width: 11rem
+    @include media-breakpoint-down(sm)
+      width: 10rem
+
+    @include media-breakpoint-down(xs)
+      width: 8.8rem
+      margin: 0 .3rem
+      margin-bottom: .4rem
+    &--add
+      @include media-breakpoint-down(xs)
+        width: 8.8rem
+        .index__name,
+        .index__desc
+          display: none
+        .index__plus
+          margin: 0
+
+  &__name
+    margin-bottom: .1rem
+    font-size: 1rem
+    max-width: 100%
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    @include media-breakpoint-down(xs)
+      font-size: .8rem
+
+  &__info
+    display: flex
+    flex-flow: row wrap
+    text-align: center
+    align-items: center
+    align-content: center
+
+  &__price,
+  &__change
+    display: inline-block
+
+  &__change
+    position: relative
+    padding-left: .8rem
+    margin-left: .5rem
+    font-size: .9rem
+    margin-right: 0 !important
+    @include media-breakpoint-down(xs)
+      font-size: .7rem
+
+
+  &__price
+    font-size: 1.1rem
+    @include media-breakpoint-down(xs)
+      font-size: .8rem
+
+
+  &__name,
+  &__price
+    font-weight: 600
+    text-align: center
+
+  &__settings
+    width: 100%
+    margin-top: 1rem
+    @include media-breakpoint-down(sm)
+      margin: 0
+      // visibility: hidden
+      // height: 0
+
+  &__desc
+    font-size: .7rem
+    text-align: center
+
+  &__plus
+    width: 2rem
+    height: 2rem
+    margin: 1rem
+
+.setting__coin
+  &.pending
+    opacity: .5
+
+.light
+  .index
+    &__plus
+      fill: $pale_sky
+
+    &__settings
+      fill: $pale_sky
+
+    &__item
+      background-color: $athens_gray // color
+      &.active
+        background-color: $denim
+        color: white
+        .index__name
+          color: white
+
+        .index__price
+          color: $chateau_green
+
+        .index__desc,
+        .change__title
+          color: $cadet_blue
+
+        .change__value.down
+          color: white
+          border-color: white
+
+        svg.setting__coin
+          fill: white
+          &.disabled
+            opacity: .6
+
+    &__name,
+    &__desc,
+    &__price
+      color: $tangaroa
+
+.dark
+  .index
+    &__plus
+      fill: $pale_sky
+
+    &__settings
+      fill: $pale_sky
+
+    &__item
+      background-color: $mirage // color
+      &.active
+        background-color: $denim
+        color: white
+        .index__name
+          color: white
+
+        .index__price
+          color: $chateau_green
+
+        .index__desc,
+        .change__title
+          color: $cadet_blue
+
+        .change__value.down
+          color: white
+          border-color: white
+
+        svg.setting__coin
+          fill: white
+          &.disabled
+            opacity: .6
+
+    &__name,
+    &__desc,
+    &__price
+      color: white

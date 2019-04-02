@@ -1,0 +1,130 @@
+{
+  "chart": {
+    "backgroundColor": "#242b43"
+  },
+  "legend": {
+    "itemHoverStyle": {
+      "color": "#f5e3c8"
+    },
+    "itemStyle": {
+      "color": "#ffffff"
+    }
+  },
+  "loading": {
+    "style": {
+      "backgroundColor": "#212840",
+      "opacity": 0.7
+    }
+  },
+  "plotOptions": {
+    "candlestick": {
+      "color": "transparent"
+    }
+  },
+  "rangeSelector": {
+    "inputBoxBorderColor": "transparent",
+    "inputStyle": {
+      "color": "#0b50cd",
+      "font-family": "inherit",
+      "font-size": "0.6rem",
+      "font-weight": "bold"
+    },
+    "labelStyle": {
+      "color": "#021032",
+      "font-family": "inherit",
+      "font-size": "0.6rem",
+      "font-weight": "bold"
+    }
+  },
+  "xAxis": {
+    "id": "x-axis",
+    "labels": {
+      "style": {
+        "color": "#ffffff",
+        "font-size": "0.6rem",
+        "font-weight": "400"
+      }
+    },
+    "title": {
+      "style": {
+        "color": "#ffffff",
+        "font-size": "0.6rem",
+        "font-weight": "400"
+      }
+    }
+  },
+  "yAxis": [
+    {
+      "gridLineColor": "#e1e3e8",
+      "labels": {
+        "style": {
+          "color": "#FF9F1C",
+          "font-size": "0.6rem",
+          "font-weight": "bold"
+        }
+      },
+      "tickColor": "#FF0000",
+      "title": {
+        "style": {
+          "color": "#FF9F1C",
+          "font-size": "0.6rem",
+          "font-weight": "400"
+        }
+      }
+    },
+    {
+      "gridLineColor": "#e1e3e8",
+      "labels": {
+        "style": {
+          "color": "#E71D36",
+          "font-size": "0.6rem",
+          "font-weight": "bold"
+        }
+      },
+      "tickColor": "#FF0000",
+      "title": {
+        "style": {
+          "color": "#E71D36",
+          "font-size": "0.6rem",
+          "font-weight": "400"
+        }
+      }
+    },
+    {
+      "gridLineColor": "#e1e3e8",
+      "labels": {
+        "style": {
+          "color": "#2EC4B6",
+          "font-size": "0.6rem",
+          "font-weight": "bold"
+        }
+      },
+      "tickColor": "#FF0000",
+      "title": {
+        "style": {
+          "color": "#2EC4B6",
+          "font-size": "0.6rem",
+          "font-weight": "400"
+        }
+      }
+    },
+    {
+      "gridLineColor": "#e1e3e8",
+      "labels": {
+        "style": {
+          "color": "#ffffff",
+          "font-size": "0.6rem",
+          "font-weight": "bold"
+        }
+      },
+      "tickColor": "#FF0000",
+      "title": {
+        "style": {
+          "color": "#ffffff",
+          "font-size": "0.6rem",
+          "font-weight": "400"
+        }
+      }
+    }
+  ]
+}

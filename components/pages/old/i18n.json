@@ -1,0 +1,20 @@
+{
+  "messages": {
+    "en": {
+      "oldBrowserPage": {
+        "title": "It looks like you are using an outdated browser. For comfortable work with our application, it is recommended to install the latest version of the browser from the list below.",
+        "download": "Download",
+        "titleProceed": "You can continue to work with the application, but some functionality may be will not be available for you, or application will not work correctly.",
+        "buttonProceed": "Proceed"
+      }
+    },
+    "ru": {
+      "oldBrowserPage": {
+        "title": "Похоже, что вы используете устаревший браузер. Для комфортной работы с нашим приложением рекомендуется установить последнюю версию браузера из списка ниже.",
+        "download": "Загрузить",
+        "titleProceed": "Вы можете продолжить работу с приложением, но возможно вам будет недоступен некоторый функционал, либо он будет работать некорректно.",
+        "buttonProceed": "Продолжить"
+      }
+    }
+  }
+}

@@ -1,0 +1,439 @@
+@import "~assets/sass/vars.sass";
+@import "~assets/sass/mixins.sass";
+@import "~bootstrap/scss/bootstrap.scss";
+
+.highcharts-container {
+  min-width: 100% !important;
+  width: 100% !important;
+}
+
+.dark {
+  .chart-wrapper {
+    background: #242b43;
+  }
+
+  .chart-nav__intervals {
+    background: #303d5e;
+  }
+
+  .chart-nav__interval {
+    color: $cadet_blue;
+
+    &::after {
+      color: $cadet_blue;
+    }
+  }
+
+  .chart-nav__interval--active {
+    color: $denim;
+  }
+
+  .chart-nav__settings-view {
+    color: $pale_sky;
+  }
+
+  .chart-nav__zoom-in,
+  .chart-nav__zoom-out,
+  .chart-nav__zoom-delimiter {
+    color: white;
+
+    &:hover {
+      background: $denim;
+    }
+  }
+
+  .chart__picker-wrap {
+    border: solid 1px #a6afbd;
+
+    & .label {
+      color: white;
+    }
+
+    & .date {
+      color: $denim;
+    }
+  }
+
+  .chart__picker-wrap--active {
+    background: $denim;
+
+    & .label,
+    & .date {
+      color: white;
+    }
+  }
+
+  .highcharts-scrollbar-track {
+    fill: #2b3149;
+  }
+
+  .highcharts-scrollbar-thumb {
+    fill: #737786;
+  }
+
+  .highcharts-scrollbar-button {
+    fill: #4f5567;
+  }
+
+  .highcharts-scrollbar-arrow {
+    fill: #c3c5cb;
+  }
+
+  .highcharts-scrollbar-rifles {
+    fill: #000000;
+  }
+}
+
+.light {
+  .chart-wrapper {
+    background: white;
+  }
+
+  .chart-nav__intervals {
+    background: #f2f3f8;;
+  }
+
+  .chart-nav__interval {
+    color: #000000;
+
+    &::after {
+      color: #000000;
+    }
+  }
+
+  .chart-nav__interval--active {
+    color: $denim;
+  }
+
+  .chart-nav__settings-view {
+    color: #000000;
+  }
+
+  .chart-nav__zoom-in,
+  .chart-nav__zoom-out,
+  .chart-nav__zoom-delimiter {
+    color: $denim;
+
+    &:hover {
+      background: white;
+    }
+  }
+
+  .chart__picker-wrap {
+    border: solid 1px #a6afbd;
+    cursor: pointer;
+
+    & .label {
+      color: black;
+    }
+
+    & .date {
+      color: $denim;
+    }
+  }
+
+  .chart__picker-wrap--active {
+    background: $denim;
+
+    & .label,
+    & .date {
+      color: white;
+    }
+  }
+
+  .highcharts-scrollbar-track {
+    fill: #f3f3f3;
+  }
+
+  .highcharts-scrollbar-thumb {
+    fill: #a1a1a1;
+  }
+
+  .highcharts-scrollbar-button {
+    fill: #cbcbcb;
+  }
+
+  .highcharts-scrollbar-arrow {
+    fill: #595959;
+  }
+
+  .highcharts-scrollbar-rifles {
+    fill: #FFFFFF;
+  }
+}
+
+.chart-wrapper {
+  width: 100%;
+  padding: 0;
+  border-radius: 5px;
+}
+//
+//.chart-nav {
+//  margin-bottom: .7rem;
+//}
+
+.chart-nav__intervals {
+  z-index: 9;
+  border-radius: 4px;
+  padding: 5px 50px 5px 8px;
+  @include media-breakpoint-down(sm) {
+    padding: 0 10px 0 8px
+  }
+}
+
+.chart-nav__interval {
+  font-family: inherit;
+  font-size: .6rem;
+  font-weight: bold;
+  line-height: 1;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  transition: all .2s ease;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+  &:after{
+    @include media-breakpoint-down(md) {
+      margin: 0 7px !important;
+    }
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  &--active{
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+    &:after{
+      @include media-breakpoint-down(sm) {
+        display: none !important;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    &::after {
+      content: '/';
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+}
+
+.chart-nav__zoom-in,
+.chart-nav__zoom-out {
+  width: 22px;
+  height: 22px;
+
+  font-size: 19px;
+  line-height: 22px;
+
+  border-radius: 100%;
+
+  cursor: pointer;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  transition: all .2s ease;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.chart-nav__zoom-delimiter {
+  margin: 0 5px;
+  pointer-events: none;
+  &::before {
+    content: '/';
+    display: block;
+
+    font-size: 19px;
+  }
+}
+
+.chart {
+  width: 100%;
+}
+
+.chart-nav__settings-view {
+  font-size: .6rem;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::after {
+    width: 21px;
+    height: 21px;
+
+    margin-left: 5px;
+
+    //background-image: url("");
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.chart__date-picker {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 99;
+}
+
+.chart__picker-wrap {
+  padding: 4px 8px;
+
+  font-size: .6rem;
+  font-weight: bold;
+
+  border-radius: 4px;
+
+  transition: all .2s ease;
+
+  .label{
+    @include breakpoint-down($w360) {
+      display: none !important
+    }
+  }
+
+  .date {
+    &:last-of-type:before{
+      @include breakpoint-down($w360) {
+        content: '- '
+      }
+    }
+  }
+
+  & > .label,
+  & > .date {
+    transition: inherit;
+  }
+}
+
+.chart__socket-status {
+  display: inline-block;
+  font-size: .6rem;
+  font-weight: 300;
+  opacity: .5;
+  transition: all .2s ease;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    margin-right: 10px;
+    transition: inherit;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.chart__socket-status--0 {
+  &::before {
+    background: yellow;
+  }
+}
+
+.chart__socket-status--1 {
+  &::before {
+    background: red;
+  }
+}
+
+.chart__socket-status--2 {
+  &::before {
+    background: green;
+  }
+}
+
+.interval__list{
+  display: flex;
+  align-items: center
+}
+
+.chart-nav__zoom-in--disabled,
+.chart-nav__zoom-out--disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+
+.highcharts-loading {
+  .highcharts-loading-inner,
+  .highcharts-loading-inner::before,
+  .highcharts-loading-inner::after {
+    display: block;
+    background: $denim;
+    animation: loading 1s infinite ease-in-out;
+    height: 1em;
+    width: 4em;
+  }
+
+  .highcharts-loading-inner {
+    color: $denim;
+    text-indent: -9999em;
+    font-size: 11px;
+    z-index: 10;
+    animation-delay: -0.16s;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.fixed {
+      position: fixed;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      transform: translate(-50%, 0);
+      left: 50%;
+    }
+
+    &::before {
+      top: -1.5em;
+      animation-delay: -0.32s;
+    }
+
+    &::after {
+      top: 1.5em;
+    }
+  }
+
+  @keyframes loading {
+    0%,
+    80%,
+    100% {
+      width: 4em
+    }
+    40% {
+      width: 6em
+    }
+  }
+}

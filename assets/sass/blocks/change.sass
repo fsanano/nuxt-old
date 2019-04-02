@@ -1,0 +1,78 @@
+@import '~assets/sass/vars.sass';
+@import "~bootstrap/scss/bootstrap.scss";
+
+.change
+  display: inline-block
+  // padding-right: 1rem
+
+  &__container
+    min-width: 45%
+    min-width: 48%
+    margin-right: 2%
+    margin-bottom: .4rem
+
+  &__list
+    display: flex
+    justify-content: center
+    flex-flow: row wrap
+    padding-top: 1rem
+    width: 100%
+
+  &__title
+    margin-bottom: .5rem
+    font-size: .7rem
+    line-height: 1.26
+    &--bottom
+      margin-bottom: 0
+      margin-top: .1rem
+      line-height: 1
+
+  &__value
+    padding: .35rem
+    border-radius: .35rem
+    border: 1px solid transparent
+    line-height: 1
+    @include media-breakpoint-down(sm)
+      padding: .25rem
+      font-size: .8rem
+
+    &.up
+      color: $chateau_green
+      border-color: $chateau_green
+
+    &.down
+      color: $thunderbird
+      border-color: $thunderbird
+
+
+
+.coin,
+.index
+  &__change
+    position: relative
+    padding-left: .8rem
+    margin-left: .5rem
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      width: 0
+      height: 0
+      top: 0
+      bottom: 0
+      margin: auto
+      border-top: .5rem solid transparent
+      border-bottom: .5rem solid transparent
+      border-left: .3rem solid transparent
+      border-right: .3rem solid transparent
+
+    &.up
+      &:before
+        border-bottom-color: $salem
+        transform: translateY(-27%);
+
+    &.down
+      &:before
+        border-top-color: $crimson
+        transform: translateY(27%);

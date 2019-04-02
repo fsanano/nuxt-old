@@ -1,0 +1,620 @@
+@import '~assets/sass/vars.sass'
+@import '~assets/sass/mixins.sass'
+@import '~assets/sass/blocks/change.sass'
+@import '~assets/sass/blocks/modal.sass'
+
+.coin
+  &__container
+    display: flex
+    margin-bottom: 1rem
+    border-radius: .5rem
+    position: relative
+
+    &--active
+      z-index: 3
+
+  &__icon
+    display: none
+    max-width: 1.2rem
+    margin-bottom: .75rem
+    img
+      width: 100%
+
+  &__name
+    font-weight: 600
+
+    &:first-letter
+      text-transform: uppercase
+
+  &__price
+    white-space: nowrap
+    // padding-right: 1rem
+    font-weight: 600
+
+  &__row
+    display: flex
+    line-height: .68
+    align-items: center
+    @include breakpoint-down(1150px)
+      flex-flow: row wrap
+
+    @include media-breakpoint-down(sm)
+      align-items: center
+      line-height: 1
+
+  &__desc
+    font-size: .7rem
+
+  &__change
+    margin-right: .5rem
+
+  &__info,
+  &__extra,
+  &__desc
+    padding: 0 .5rem
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+
+  &__data
+    &-list
+      padding-bottom: 1.5rem
+
+  &__settings
+    display: flex
+    justify-content: space-between
+    width: 100%
+
+.setting
+  &__coin
+    position: relative
+    cursor: pointer
+    user-select: none
+    fill: $denim
+    &.disabled
+      fill: $pale_sky
+
+  &__data
+    position: absolute
+    top: -50%
+    left: 50%
+    width: 1rem
+    height: 1rem
+    line-height: 1.6
+    text-align: center
+    border-radius: 100%
+    font-size: .6rem
+
+.data-grid
+  &__content
+    margin: 0 -.5rem
+    &.__wild
+      @include breakpoint-down(900px)
+        margin: 0 -.5rem
+      .coin
+        &__row
+          width: 100%
+
+        &__container
+          padding: 1.15rem .65rem
+          margin: .5rem
+          @include breakpoint-down(900px)
+            flex-flow: row wrap
+
+          @include breakpoint-down(500px)
+            padding: .5rem .5rem !important
+
+        &__info,
+        &__extra,
+        &__desc
+          @include breakpoint-down(1300px)
+            width: 33.33%
+
+        &__info,
+        &__extra
+          width: 25%
+          position: relative
+          @include breakpoint-down(900px)
+            width: 50%
+
+          &:after
+            content: ''
+            position: absolute
+            right: 0
+            top: -1.15rem
+            height: calc(100% + 2.3rem)
+            width: 1px
+            @include breakpoint-down(500px)
+              top: -.5rem
+              height: calc(100% + 1.5rem)
+
+        &__extra
+          @include breakpoint-down(500px)
+            padding: 0
+            padding-left: .2rem
+
+          &:after
+            @include breakpoint-down(900px)
+              display: none
+
+        &__desc
+          width: 50%
+          @include breakpoint-down(900px)
+            width: calc(100% + 1.2rem)
+            padding: .5rem 1rem 0
+            margin-top: 1.1rem
+            border-top-width: 1px
+            border-top-style: solid
+            margin-left: -.6rem
+            margin-right: -.6rem
+
+          @include breakpoint-down(500px)
+            padding: .2rem .6rem 0
+
+        &__info
+          @include breakpoint-down(500px)
+            padding: 0
+            padding-right: .2rem
+
+        &__icon
+          display: block
+
+        &__value
+          @include breakpoint-down(500px)
+            font-size: .8rem
+            padding: .25rem
+
+        &__name
+          margin-bottom: .75rem
+          width: 100%
+          @include breakpoint-down(500px)
+            font-size: .8rem
+
+        &__name,
+        &__change
+          font-size: 1rem
+
+        &__change
+          @include media-breakpoint-down(sm)
+            margin-bottom: 0
+          @include breakpoint-down(500px)
+            font-size: .6rem
+            margin-right: 0
+            line-height: 1
+
+        &__price
+          font-size: 1.3rem
+          @include media-breakpoint-down(sm)
+            margin-bottom: 0
+
+          @include breakpoint-down(500px)
+            font-size: 1rem
+
+        &__settings
+          position: absolute
+          bottom: 0
+          left: 0.5rem
+          width: calc(100% - 1rem)
+
+        &__data-list
+          width: 100%
+
+      .change.__small
+        display: none !important
+
+      .change__data
+        display: flex
+        flex-flow: row wrap
+        padding-left: .5rem
+        justify-content: center
+        .change__title--bottom
+          margin-top: 0
+          @include breakpoint-down(500px)
+            font-size: .6rem
+            padding-left: .2rem
+
+      .data__row
+        width: 100%
+
+      .data__key
+        width: 50%
+        display: inline-block
+
+      .coin__price,
+      .coin__data
+        margin-bottom: .3rem
+
+      .data__key,
+      .data__value
+        @include breakpoint-down(500px)
+          width: auto
+
+      .data__value
+        @include breakpoint-down(500px)
+          white-space: nowrap
+
+      .data__key
+        @include breakpoint-down(500px)
+          margin-right: .3rem
+
+    &.__row,
+    &.__grid
+
+      .coin
+        &__icon
+          display: none
+
+        &__container
+          padding: .5rem .35rem
+          margin: .5rem
+
+        &__name
+          margin-bottom: .3rem
+
+        &__name,
+        &__price,
+        &__change
+          font-size: .8rem
+
+        &__row
+          width: 100%
+          // padding-right: 1rem
+          justify-content: space-between
+
+        &__price,
+        &__change.down
+          width: auto
+
+
+        &__change
+          font-size: .7rem
+          padding: .5rem
+          padding-left: .8rem
+          @include media-breakpoint-down(sm)
+            margin-bottom: 0
+
+      .change__list
+        display: none
+
+      .change.__small
+        font-size: .7rem
+
+      .change__data
+        display: flex
+        flex-flow: column wrap
+        align-items: center
+
+      .coin__data-list
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        // padding-bottom: 0
+        padding: 0.8rem 0
+        .data__row
+          white-space: nowrap
+          margin-bottom: 0.3rem
+          margin-right: 0.3rem
+
+    &.__row
+      .coin
+        &__container
+          align-items: stretch
+          @include breakpoint-down(1150px)
+            flex-flow: row wrap
+
+          .coin__data-list
+            @include breakpoint-down(400px)
+              width: auto
+              margin: 0 -.75rem
+              padding: 1rem
+              border-bottom-width: 1px
+              border-bottom-style: solid
+
+          .coin__settings
+            @include breakpoint-down(400px)
+              width: 100%
+              height: auto !important
+              padding: 1rem 0
+              border: 0
+
+          .coin
+            &__desc
+              @include breakpoint-down(1150px)
+                width: calc(100% + 1.2rem)
+                padding: .5rem 1rem 0
+                border-top-width: 1px
+                border-top-style: solid
+                margin-left: -.6rem
+                margin-right: -.6rem
+
+            &__extra
+              @include breakpoint-down(1150px)
+                width: 66%
+
+              @include breakpoint-down(600px)
+                width: auto
+                margin: 0 -.4rem
+                padding: 0 .8rem
+                border-top-width: 1px
+                border-top-style: solid
+
+            &__info
+              @include breakpoint-down(600px)
+                width: 100%
+
+              &:after
+                @include breakpoint-down(1150px)
+                  display: none
+
+                @include breakpoint-down(600px)
+                  display: none
+
+              @include breakpoint-down(1150px)
+                width: 33%
+
+            &__data-list
+              @include breakpoint-down(900px)
+                width: 70%
+            &__settings
+              @include breakpoint-down(900px)
+                width: 30%
+
+        &__extra
+          display: flex
+          align-items: stretch
+
+        &__settings
+          position: relative
+
+        &__extra,
+        &__data-list,
+        &__settings
+          width: 50%
+
+        &__info,
+        &__desc
+          width: 25%
+
+        &__data-list
+          padding-right: .5rem
+
+        &__settings
+          padding-left: .5rem
+          height: 100%
+          border-left-width: 1px
+          border-left-style: solid
+
+        &__info,
+        &__extra
+          position: relative
+          &:after
+            content: ''
+            position: absolute
+            right: 0
+            top: 0
+            height: 100%
+            width: 1px
+
+    &.__grid
+      display: flex
+      flex-flow: row wrap
+      justify-content: flex-start
+      @include breakpoint-down(400px)
+        margin: 0 -.3rem
+      .coin
+        &__container
+          width: calc(25% - 1rem)
+          // margin-right: 1%
+          flex-flow: column nowrap
+          align-items: stretch
+          justify-content: space-between
+
+          @include breakpoint-down(1250px)
+            width: calc(33.33% - 1rem)
+
+          @include breakpoint-down(900px)
+            width: calc(50% - 1rem)
+
+          @include breakpoint-down(400px)
+            width: calc(50% - .6rem)
+            margin: .3rem
+
+        &__desc
+          display: none
+
+        &__price
+          @include breakpoint-down(500px)
+            font-size: .7rem
+            width: 100%
+            margin-bottom: .2rem
+
+        &__value
+          @include breakpoint-down(500px)
+            padding: .25rem
+
+
+        &__info,
+        &__extra
+          @include breakpoint-down(600px)
+            padding: 0
+
+          &:after
+            display: none
+
+        &__change
+          @include breakpoint-down(600px)
+            margin-left: .2rem
+            margin-right: .2rem
+          @include breakpoint-down(500px)
+            padding: .2rem .7rem
+            margin: 0
+
+        &__data-list
+          .data__row
+            @include breakpoint-down(900px)
+              white-space: normal
+
+      .data__row
+        width: auto
+        &:last-of-type
+          width: 100%
+
+.data
+  &__row
+    font-size: .7rem
+    margin-bottom: .6rem
+
+  &__key
+    &:after
+      content: ": "
+
+    &.max
+      color: $salem
+
+    &.min
+      color: $crimson
+
+.change-coin
+  &__container
+    position: relative
+    // @include media-breakpoint-down(sm)
+      // width: 100%
+
+  &__label
+    position: relative
+    z-index: 2
+    font-size: .6rem
+    line-height: 1
+    cursor: pointer
+    &:after
+      content: ' +'
+      position: relative
+      top: .1rem
+      font-size: 1.2rem
+    &:hover
+      color: $denim
+
+  &__modal
+    position: absolute
+    z-index: 1
+    height: auto
+    display: flex
+    align-items: flex-end
+    border-radius: 0.5rem
+    left: -0.5rem
+    bottom: -.5rem
+    padding: 0.5rem
+    padding-bottom: 2rem
+    visibility: hidden
+    &--visible
+      visibility: visible
+
+      &.right
+        left: auto
+        right: -.5rem
+
+      &.top
+        padding-top: 2rem
+        padding-bottom: .5rem
+        top: -.5rem
+        bottom: auto
+
+
+  &__add
+    font-size: .7rem
+    white-space: nowrap
+    text-decoration: none
+
+  &__list
+    li
+      cursor: pointer
+
+  &__bar
+    height: 8.5rem
+    margin-right: -.4rem
+
+  &__item
+    font-size: .7rem
+    white-space: nowrap
+
+
+.light
+  .coin
+    &__name
+      color: $tangaroa
+
+    &__price
+      color: black
+
+    &__container
+      color: $pale_sky
+      background-color: white
+
+    &__desc,
+    &__extra,
+    &__data-list
+      border-color: $mischka
+
+  .data-grid
+    &__content
+      &.__wild,
+      &.__row
+        .coin
+          &__info,
+          &__extra
+            &:after
+              background-color: $mischka
+
+          &__settings
+            border-color: $mischka
+
+  .change-coin
+    &__modal
+      background-color: $athens_gray
+    &__add
+      color: $pale_sky
+
+  .setting
+    &__data
+      border: 1px solid white
+      background-color: $denim
+      color: white
+
+
+.dark
+  .coin
+    &__name,
+    &__price
+      color: white
+
+    &__container
+      color: $pale_sky
+      background-color: $cloud_burst
+
+    &__desc
+      border-color: $rhino
+
+  .data-grid
+    &__content
+      &.__wild,
+      &.__row
+        .coin
+          &__info,
+          &__extra
+            &:after
+              background-color: $rhino
+
+          &__settings
+            border-color: $rhino
+
+  .change-coin
+    &__modal
+      background-color: $black_pearl
+    &__add
+      color: $pale_sky
+
+  .setting
+    &__data
+      border: 1px solid $cloud_burst
+      background-color: $denim
+      color: white

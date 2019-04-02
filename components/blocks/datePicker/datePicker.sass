@@ -1,0 +1,209 @@
+@import "~assets/sass/vars"
+@import "~assets/sass/mixins"
+@import "~bootstrap/scss/bootstrap.scss"
+.dark
+  .date-picker
+    background: #242b43
+
+
+  .date-picker__row,
+  .date-picker__column
+    border: 1px solid #151d32
+
+  .date-picker__table
+    background: #242b43
+
+  .date-picker__item
+    color: $pale_sky
+
+  .data-picker__item--interval
+    color: white
+    background: $denim
+
+  .data-picker__item--unavailable
+    background: $big_stone
+    color: #212840
+
+  .date-picker__title
+    color: $denim
+
+  .date-picker__time
+    color: white
+
+  .date-picker__button-arrow-svg
+    fill: $denim
+
+  .date-picker__time
+    background: #212840
+
+  .date-picker__button-segment
+    border: 1px solid white
+    color: white
+
+  .date-picker__button-segment--active
+    border: 1px solid $denim
+    color: $denim
+
+.light
+  .date-picker
+    background: white
+
+  .date-picker__row,
+  .date-picker__column
+    border: 1px solid #acacac
+
+  .date-picker__table
+    background: white
+
+  .date-picker__item
+    color: #021032
+
+  .data-picker__item--interval
+    color: white
+    background: $denim
+
+  .data-picker__item--unavailable
+    background: $athens_gray
+    color: #acacac
+
+  .date-picker__title
+    color: #021032
+
+  .date-picker__time
+    color: #021032
+
+  .date-picker__button-arrow-svg
+    fill: #021032
+
+  .date-picker__button-segment
+    border: 1px solid #021032
+    color: black
+
+  .date-picker__button-segment--active
+    border: 1px solid $denim
+    color: $denim
+
+.date-picker
+  min-width: 300px
+  display: inline-block
+  padding: .5rem 1rem
+  border-radius: 5px
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2)
+  @include media-breakpoint-down(xs)
+    position: fixed
+    width: 100%
+    height: auto
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+.date-picker__row,
+.date-picker__column
+  border: 1px solid #acacac
+  border-collapse: collapse
+
+.date-picker__table
+  table-layout: fixed
+  background: white
+  width: 400px
+  @include media-breakpoint-down(xs)
+    margin: auto
+    width: 100%
+
+.date-picker__column
+  text-align: center
+  padding: 0
+
+.date-picker__heading
+  font-size: .6rem
+  color: #667180
+  text-align: center
+
+.date-picker__item
+  display: block
+
+  width: 100%
+  height: 35px
+
+  font-size: .9rem
+  font-weight: bold
+
+  padding: 0
+
+  background: transparent
+  border: none
+  cursor: pointer
+
+  transition: all .2s ease
+
+  &:focus
+    outline: none
+
+.data-picker__item--unavailable
+  pointer-events: none
+
+
+.date-picker__title
+  font-size: .8rem
+  font-weight: bold
+  color: #021032
+  text-transform: uppercase
+  white-space: nowrap
+
+.date-picker__button-arrow
+  background: transparent
+  border: none
+  padding: 0
+  transition: all .2s ease
+
+  &:focus
+    outline: none
+
+  &[disabled]
+    opacity: 0
+
+.date-picker__button-select
+  background: $denim
+  padding: 5px 36px
+
+  font-size: .8rem
+
+  border: none
+  border-radius: 5px
+
+  color: white
+
+  cursor: pointer
+
+.date-picker__button-segment
+  display: inline-block
+  padding: 5px
+
+  font-size: .8rem
+
+  border-radius: 4px
+  background: transparent
+
+  text-transform: uppercase
+
+  cursor: pointer
+
+.date-picker__full-date
+  font-size: .9rem
+  color: #667180
+  @include breakpoint-down($w480)
+    font-size: .8rem
+
+.date-picker__time
+  display: block
+  font-size: .9rem
+  font-weight: bold
+  border: none
+  width: 30px
+  text-align: center
+  @include breakpoint-down($w480)
+    font-size: .8rem
+
+.fill-denim
+  fill: $denim
+

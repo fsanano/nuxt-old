@@ -1,0 +1,52 @@
+{
+  "messages": {
+    "en" : {
+      "indicesTable": {
+        "isOnChart": "On chart",
+        "showCoins": "Show coins",
+        "1H": "1H",
+        "1D": "1D",
+        "1W": "1W",
+        "1M": "1М",
+        "name": "Name",
+        "price": "Price",
+        "changes": "Changes",
+        "hour": "Hour",
+        "day": "Day",
+        "week": "Week",
+        "month": "Month",
+        "dayTotal": "Day total",
+        "low": "Low",
+        "avg": "Avg",
+        "high": "High",
+        "originPrice": "Origin Price",
+        "fullChange": "Full change",
+        "coins": "Coins"
+      }
+    },
+    "ru": {
+      "indicesTable": {
+        "isOnChart": "На графике",
+        "showCoins": "Показать монеты",
+        "1H": "1Ч",
+        "1D": "1Д",
+        "1W": "1Н",
+        "1M": "1М",
+        "name": "Название",
+        "price": "Цена",
+        "changes": "Изменения",
+        "hour": "Час",
+        "day": "День",
+        "week": "Неделя",
+        "month": "Месяц",
+        "dayTotal": "За день",
+        "low": "Мин",
+        "avg": "Сред",
+        "high": "Макс",
+        "originPrice": "Начальная цена",
+        "fullChange": "Полное изменение",
+        "coins": "Монеты"
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "messages": {
+    "en": {
+      "postPage": {
+
+      },
+      "postsListPage": {
+        "meta": {
+          "category": {
+            "title": "Cryptocurrencies News - Real Time Online | ICEX",
+            "desc": "All news from the cryptocurrency world in LIVE mode. Stay up-to-date with the latest and freshest news."
+          },
+          "tags": {
+            "title": "News about {tag}",
+            "desc": "News on tag {tag}. The latest information from the world of crypto-currency, insides. All events from the {tag} world."
+          }
+        },
+        "title": "Cryptocurrency news",
+        "tagTitle": "News about {tag}",
+        "feed": "Feed",
+        "live": "Live"
+      }
+    },
+    "ru": {
+      "postPage": {
+
+      },
+      "postsListPage": {
+        "meta": {
+          "category": {
+            "title": "Все новости о криптовалютах в реальном времени - Онлайн | ICEX",
+            "desc": "Все новости из мира криптовалют в LIVE режиме. Будьте в курсе последних и самых свежих новостей. "
+          },
+          "tags": {
+            "title": "Новости о {tag}",
+            "desc": "Новости по тегу {tag}. Последняя информация из мира криптовалют, инсайды. Все события из мира {tag}."
+          }
+        },
+        "title": "Новости криптовалют",
+        "tagTitle": "Новости о {tag}",
+        "feed": "Новости",
+        "live": "Live"
+      }
+    }
+  }
+}

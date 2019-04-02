@@ -1,0 +1,106 @@
+{
+  "ru": {
+    "lang": {
+      "loading": "",
+      "months": [
+        "Январь",
+        "Февраль",
+        "Март",
+        "Апрель",
+        "Май",
+        "Июнь",
+        "Июль",
+        "Август",
+        "Сентябрь",
+        "Октябрь",
+        "Ноябрь",
+        "Декабрь"
+      ],
+      "weekdays": [
+        "Воскресенье",
+        "Понедельник",
+        "Вторник",
+        "Среда",
+        "Четверг",
+        "Пятница",
+        "Суббота"
+      ],
+      "shortMonths": [
+        "Янв",
+        "Фев",
+        "Март",
+        "Апр",
+        "Май",
+        "Июнь",
+        "Июль",
+        "Авг",
+        "Сент",
+        "Окт",
+        "Нояб",
+        "Дек"
+      ],
+      "exportButtonTitle": "Экспорт",
+      "printButtonTitle": "Печать",
+      "rangeSelectorFrom": "С",
+      "rangeSelectorTo": "По",
+      "rangeSelectorZoom": "",
+      "downloadPNG": "Скачать PNG",
+      "downloadJPEG": "Скачать JPEG",
+      "downloadPDF": "Скачать PDF",
+      "downloadSVG": "Скачать SVG",
+      "printChart": "Напечатать график"
+    }
+  },
+  "en": {
+    "lang": {
+      "loading": "",
+      "months": [
+        "January" ,
+        "February" ,
+        "March" ,
+        "April" ,
+        "May" ,
+        "June" ,
+        "July" ,
+        "August" ,
+        "September" ,
+        "October" ,
+        "November" ,
+        "December"
+      ],
+      "weekdays": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "shortMonths": [
+        "Jan" ,
+        "Feb" ,
+        "Mar" ,
+        "Apr" ,
+        "May" ,
+        "Jun" ,
+        "Jul" ,
+        "Aug" ,
+        "Sep" ,
+        "Oct" ,
+        "Nov" ,
+        "Dec"
+      ],
+      "exportButtonTitle": "Export",
+      "printButtonTitle": "Print",
+      "rangeSelectorFrom": "From",
+      "rangeSelectorTo": "To",
+      "rangeSelectorZoom": "",
+      "downloadPNG": "Download PNG image",
+      "downloadJPEG": "Download JPEG image",
+      "downloadPDF": "Download PDF document",
+      "downloadSVG": "Download SVG vector image",
+      "printChart": "Print chart"
+    }
+  }
+}

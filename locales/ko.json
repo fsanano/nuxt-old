@@ -1,0 +1,220 @@
+{
+  "aside": {
+    "index": "Index",
+    "selectAll": "Select all",
+    "coinsIndex": "Coins index",
+    "myIndex": "My index",
+    "news": "News",
+    "doc": "Doc",
+    "faq": "FAQ",
+    "privacy": "Privacy"
+  },
+
+  "coin": {
+    "min": "Low",
+    "avg": "Average",
+    "max": "High",
+    "capitalization": "Capitalization",
+    "day_volume": "Day volume",
+    "volume": "Volume",
+    "view": "View",
+    "nodata": "No data",
+    "change": "change"
+  },
+
+  "index": {
+    "yourIndex": "Your index",
+    "add": "No data",
+    "noIndex": "No coins",
+    "modal": {
+      "title": "Add Your Index",
+      "desc": "Try to bypass the ICEI10 index by replacing its coins with, in your opinion, more promising"
+    },
+    "create": "Index {index} is created, now you can replace coins from ICEI10 to any available"
+  },
+
+  "exchange": {
+    "create": "Create new index",
+    "title": "The chart is based on&nbsp;data from the following exchange markets:",
+    "market": "Exchange Market",
+    "trade_pair": "Trading pair",
+    "lastTradeSum": "Last transaction in&nbsp;USD",
+    "lastTradeVol": "Volume of&nbsp;the last transaction",
+    "volume": "Total volume in&nbsp;USD",
+    "totalDemand": "Total demand in&nbsp;USD",
+    "totalOffer": "Total offer in&nbsp;",
+    "usdDesc": "* there is a recount in USD"
+  },
+
+  "period": {
+    "day": "Day",
+    "week": "Week",
+    "month": "Month"
+  },
+
+  "ui": {
+    "search": "Search",
+    "hide": "Hide",
+    "show": "Show",
+
+    "dropdown": {
+      "clearAll": "Clear all"
+    },
+
+    "sort": {
+      "title": "Sort",
+      "price": "Price",
+      "capitalization": "Capitalization",
+      "dynamic": "Dynamic",
+      "perday": "Per day",
+      "perweek": "Per week",
+      "permonth": "Per month",
+      "exchanges": "Market count"
+    },
+
+    "filter": "Filter"
+  },
+
+  "tooltip": {
+    "chart": "Chart",
+    "chartCoins": "Indices on chart",
+    "setChartTypeCandles": "Show candles",
+    "setChartTypeLinear": "Show linear",
+    "setChartSubCap": "Show capitalization",
+    "setChartSubVol": "Show volume",
+    "favorite": "Favorite",
+    "exchanges": "Exchanges",
+    "locale": "Change language",
+    "theme": "Change theme",
+    "currency": "Change currency",
+    "publish": "Publish"
+  },
+
+  "news": {
+    "title": "Новости криптовалют",
+    "live": "Live",
+    "menu": {
+      "btc": "Bitcoin",
+      "crypto": "Криптовалюты",
+      "exchange": "Биржи",
+      "world": "Мир",
+      "opinion": "Мнения экспертов",
+      "more": "Еще"
+    }
+  },
+
+  "chart": {
+    "realTimeUpdates": "Real-Time Updates",
+    "showFullCoinInfo": "Expand blocks",
+    "intervals": {
+      "ten_seconds": "10 seconds",
+      "five_seconds": "5 seconds",
+      "three_seconds": "3 seconds",
+      "one_seconds": "1 second",
+      "off": "off",
+      "year": "1Y",
+      "month": "1M",
+      "week": "1W",
+      "day" : "1D",
+      "hour": "1H",
+      "five_minutes": "5min",
+      "minute": "1min"
+    }
+  },
+
+  "auth": {
+    "signin": {
+      "title": "Sing to ICEX",
+      "link": "Sing in",
+      "label" : "Don't have an account?"
+    },
+
+    "signup": {
+      "label": "Have an account?",
+      "title": "Sign Up"
+    },
+
+    "form": {
+      "name": "Name",
+      "email": "E-mail",
+      "pass": "Password",
+      "passConf": "Confirm password",
+      "keepMe": "Keep me signed",
+      "btn": "Select",
+      "submit": "Submit"
+    },
+
+    "forgot": {
+      "password": "Forgot password?"
+    }
+  },
+
+  "user": {
+    "hello": "Hello",
+    "logout": "Logout"
+  },
+
+  "meta": {
+    "pages": {
+      "feed": {
+        "tags": {
+          "title": "News about {tag}",
+          "desc": "News on tag {tag}. The latest information from the world of crypto-currency, insides. All events from the {tag} world."
+        }
+      },
+      "coinChart": {
+        "title": "{coin}({coinShort}) Price Index | Online Graph for Day, Week, Month",
+        "desc": "Real time {coin}({coinShort}) price index in USD, EUR and other currencies. The graph of the index {coin}({coinShort})"
+      },
+      "coinExchanges": {
+        "title": "{coin} Exchanges - Buy, Sell, Trading | ICEX",
+        "desc": "List of trusted exchanges where you can buy or sell {coin} at the best price. Reviews and other information."
+      },
+      "indexChart": {
+        "title": "Cryptocurrency Index {index}",
+        "desc": "Индекс {index} состоит из {count} монет. Создайте свой собственный высокодоходный индекс."
+      },
+      "newsCategory": {
+        "title": "Cryptocurrencies News - Real Time Online | ICEX",
+        "desc": "All news from the cryptocurrency world in LIVE mode. Stay up-to-date with the latest and freshest news."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions | ICEX"
+      },
+      "terms": {
+        "title": "Terms | ICEX"
+      },
+      "privacy": {
+        "title": "Privacy Policy | ICEX"
+      }
+    }
+  },
+  "feed": {
+    "tags": {
+      "tagTitle": "News about {tag}"
+    }
+  },
+  "datepicker": {
+    "goToLast": "go to last"
+  },
+  "capitalization": "capitalization",
+  "capitalization_short": "cap",
+  "spline": "spline",
+  "volume": "volume",
+  "candlestick": "candlestick",
+  "price": "price",
+  "from": "from",
+  "to": "to",
+  "select": "select",
+  "min": "min",
+  "avg": "avg",
+  "max": "max",
+  "1d": "1d",
+  "7d": "7d",
+  "1month": "1M",
+  "_coin": "coin",
+  "exchanges": "exchanges",
+  "exchanges_short": "exch",
+  "_chart": "chart",
+  "siteIsUnderMaintenance": "Site is under maintenance and will be available soon"
+}

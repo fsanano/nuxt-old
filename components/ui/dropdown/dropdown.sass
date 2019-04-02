@@ -1,0 +1,343 @@
+@import '~assets/sass/vars.sass'
+@import '~assets/sass/mixins.sass'
+
+.autocomplete,
+.dropdown
+  &__container
+    position: relative
+    z-index: 2
+    width: 10rem
+    // margin-left: 1.1rem
+    border-radius: .2rem
+    font-size: .8rem
+    border-width: 1px
+    border-style: solid
+    @include breakpoint-down($w768)
+      width: 45%
+    @include breakpoint-down($w480)
+      width: 100%
+
+  &__input
+    width: 100%
+    height: 100%
+    border: 0
+    font-size: .8rem
+    background-color: transparent
+    &:focus
+      outline: none
+
+  &__list
+    max-height: 100%
+    &-container
+      position: absolute
+      width: calc(100% + 2px)
+      border-width: 1px
+      border-style: solid
+      left: -1px
+
+    &-item
+      display: block
+      padding: .2rem .5rem
+      color: $tangaroa
+      text-decoration: none
+      cursor: pointer
+      span
+        color: $denim
+      &:hover
+        color: $denim
+        text-decoration: none
+      &.active
+        color: $denim
+.dropdown
+  &__container
+    border-bottom-color: transparent
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+
+  &__input
+    border-bottom: 1px solid transparent
+
+  &__list
+    border-top: 0 !important
+    border-bottom-left-radius: .2rem
+    border-bottom-right-radius: .2rem
+    top: calc(100% - 2px)
+
+.autocomplete
+  &__container
+    @include breakpoint-down($w768)
+      margin-right: .5rem
+    &.bottom,
+    &.search
+      &.open
+        border-bottom-color: transparent
+        border-bottom-left-radius: 0
+        border-bottom-right-radius: 0
+    &.top
+      padding-bottom: 1.5rem
+      &.open
+        border-top: 0
+  // border-top-left-radius: 0
+  // border-top-right-radius: 0
+
+  &__input
+    &.search,
+    &.bottom
+      border-bottom: 1px solid transparent
+    &.top
+      border-top: 1px solid transparent
+      padding: .2rem .5rem
+      padding-right: 2rem
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: 3
+      height: 1.5rem
+
+  &__list
+    &-container
+      &.search,
+      &.bottom
+        border-top: 0 !important
+        border-bottom-left-radius: .2rem
+        border-bottom-right-radius: .2rem
+        top: calc(100% - 2px)
+
+      &.top
+        position: relative
+        // padding-bottom: 1.5rem
+        border-bottom: 0 !important
+        border-top-left-radius: .2rem
+        border-top-right-radius: .2rem
+        bottom: calc(100% - 2px)
+
+  &__icon
+    position: absolute
+    right: 7px
+    top: 0
+    bottom: 0
+    margin: auto
+    fill: $denim
+
+  &__container
+    &.search,
+    &.bottom
+      padding: .2rem .5rem
+      padding-right: 2rem
+
+
+  &__list
+    height: 100%
+
+  &__list,
+  &__list-bar
+    margin: 0
+    &.search
+    &.bottom
+      .autocomplete__list,
+      .autocomplete__list-bar
+        max-height: 9rem
+    &.top
+      .autocomplete__list,
+      .autocomplete__list-bar
+        max-height: 6rem
+
+
+
+.light
+  .autocomplete,
+  .dropdown
+    &__container,
+    &__list-container
+      border-color: $mischka
+      background-color: white
+      color: $tangaroa
+      &.open
+        .autocomplete__input
+          border-color: $mischka
+
+    &__input.top
+      border-color: $mischka
+
+    &__list
+      &-item
+        color: $tangaroa
+        span
+          color: $denim
+        &:hover,
+        &.active
+          color: $denim
+
+.dark
+  .autocomplete,
+  .dropdown
+    &__container,
+    &__list-container
+      border-color: $rhino
+      background-color: $cloud_burst
+      color: $cadet_blue
+      &.open
+        .autocomplete__input
+          color: $cadet_blue
+          border-color: $rhino
+
+    &__input
+      color: $cadet_blue
+      border-color: $rhino
+
+    &__list
+      &-item
+        color: $cadet_blue
+        span
+          color: $denim
+        &:hover,
+        &.active
+          color: $denim
+
+.dropdown
+  &__list
+    &-container
+      padding: 0 .8rem
+
+  &__clear
+    margin-bottom: .4rem
+    cursor: pointer
+    color: $denim
+    font-size: .6rem
+
+  &__title
+    position: relative
+    display: flex
+    height: calc(27px + .4rem)
+    padding: .2rem .5rem
+    padding-right: 2rem
+    align-items: center
+    cursor: pointer
+    user-select: none
+
+  &__caret
+    position: absolute
+    top: 50%
+    right: .5em
+    margin-top: -3px
+    border-top: 5px solid transparent
+    border-left: 5px solid transparent
+    border-right: 5px solid transparent
+    border-bottom: 5px solid transparent
+
+  &__item
+    &:last-of-type
+      border: 0
+
+    &-title
+      margin-top: .5rem
+      margin-bottom: .2rem
+      font-size: .7rem
+      font-weight: bold
+
+    &-content
+      padding-bottom: .2rem
+
+  &__btn
+    padding: .2rem .3rem
+    margin: 0 .3rem
+    cursor: pointer
+    font-size: .6rem
+    border-radius: .2rem
+    &.__bold
+      font-weight: bold
+
+    &-desc
+      font-size: .6rem
+      width: 50%
+
+
+.open
+  .dropdown__caret
+    margin-top: -8px
+
+
+.light
+
+  .dropdown
+    &__caret
+      border-top-color: $pale_sky
+
+    &__item
+      border-bottom: 1px solid $mischka
+      &-title
+        color: $tangaroa
+
+    &__btn
+      color: $pale_sky
+      &:hover
+        svg
+          fill: white
+      svg
+        fill: $pale_sky
+
+      &.__bold
+        color: $tangaroa
+
+      &-desc
+        color: $pale_sky
+
+      &.active,
+      &:hover
+        background-color: $denim
+        color: white
+        svg
+          fill: white
+
+  .open
+    .dropdown
+      &__caret
+        border-top-color: transparent
+        border-bottom-color: $pale_sky
+
+
+.dark
+
+  .dropdown
+    &__caret
+      border-top-color: $pale_sky
+
+    &__item
+      border-bottom: 1px solid $rhino
+      &-title
+        color: $pale_sky
+
+      &-content
+        border-color: $pale_sky
+
+    &__btn
+      color: $pale_sky
+      &:hover
+        svg
+          fill: white
+      svg
+        fill: $pale_sky
+
+      &.__bold
+        color: $pale_sky
+
+      &-desc
+        color: $pale_sky
+
+      &.active,
+      &:hover
+        background-color: $denim
+        color: white
+        svg
+          fill: white
+
+  .open
+    .dropdown
+      &__caret
+        border-top-color: transparent
+        border-bottom-color: $pale_sky
+
+
+@media (max-width: $w480)
+  .dropdown__list-container
+    padding: 0 .3rem

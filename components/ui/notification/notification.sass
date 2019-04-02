@@ -1,0 +1,88 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+$notif-width: 300px
+
+.notif
+  position: relative
+  width: $notif-width
+  min-height: 120px
+  border-radius: 2.5px
+  background-color: #ffffff
+  box-shadow: -0.9px 2.3px 2.5px 0 rgba(0, 0, 0, 0.05)
+  @include media-breakpoint-down(md)
+    min-height: 0
+
+
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    width: 10px
+    z-index: 1
+
+  &:not(:last-child)
+    margin-bottom: 15px
+
+.notif--error
+  &::before
+    background: #cd1219
+
+.notif--warn
+  &::before
+    background: #f0cd17
+
+.notif--info
+  &::before
+    background: #01cf26
+
+.notif__body
+  padding: 6px 12px 6px 30px
+
+.notif__title
+  color: black
+  font-size: .8rem
+
+.notif__text
+  font-size: .7rem
+  color: #667180
+  word-wrap: break-word
+  b
+    font-weight: bold
+
+.notif__title-row
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.notif__button-close
+  width: 15px
+  height: 15px
+  padding: 0
+  background: transparent
+  border: none
+
+  cursor: pointer
+
+  &:focus
+    outline: none
+
+  & > .cross-mark
+    fill: #667180
+    width: 100%
+    height: 100%
+
+.notification-enter-active,
+.notification-leave-active
+  transition: all .2s ease
+
+.notification-enter, .notification-leave-to
+  transform: translateX($notif-width)
+  opacity: 0
+
+.notification-move
+  transition: all .2s ease
+
+.notification-leave-active
+  position: absolute
